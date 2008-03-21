@@ -1,0 +1,15 @@
+/* ikiwiki local style sheet */
+
+blockquote {
+        margin: 10pt 20pt 10pt 20pt;
+}
+
+cite {
+        margin: 10pt 10pt 10pt 50pt;
+        text-align: right;
+}
+
+td {
+        border-width: 1px;
+        border-style: solid;
+}
