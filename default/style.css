@@ -322,3 +322,32 @@ legend {
 	background: #eee; 
 	color: black !important;
 }
+
+/* zoph */
+
+.zoph dt {
+	float: left;
+	font-weight: bold;
+	width: 9em;
+}
+
+.zoph dd {
+	margin-left: 9em;
+	min-height: 1.5em;
+}
+
+.zoph .title {
+	font-weight: bold;
+}
+	
+.zoph .photo_list {
+	padding-left: 0;
+}
+
+.zoph .photo_list li {
+	display: inline;
+	float: left;
+	width: 200px;
+	margin-bottom: 2em;
+	height: 180px;
+}
