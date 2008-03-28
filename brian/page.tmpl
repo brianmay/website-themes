@@ -1,6 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><TMPL_VAR TITLE></title>
@@ -29,7 +29,7 @@
 
 <div id='site-slogan'>
 Where penguins eat Windows
-</div>
+</div> <!-- /site-slogan -->
 </div> <!-- /name-and-slogan -->
 
 </div> <!-- /logo-title -->
@@ -39,12 +39,12 @@ Where penguins eat Windows
 </div> <!-- /navigation -->
 
 <div id="header-region">
-</div>
+</div> <!-- /header-region -->
 </div> <!-- /header -->
 
 <div id="container" class="clear-block">
 <div class="header-rod">
-</div>
+</div> <!-- /container-rod -->
 
 <div id="sidebar-left" class="column sidebar">
 <div class="block">
@@ -73,9 +73,9 @@ Where penguins eat Windows
 <li class="leaf"><TMPL_VAR DISCUSSIONLINK><br /></li>
 </TMPL_IF>
 </ul>
-</div>
-</div>
-</div>
+</div> <!-- /content -->
+</div> <!-- /blockinner -->
+</div> <!-- /block -->
 
 <TMPL_IF SIDEBAR>
 <div class="block">
@@ -83,9 +83,9 @@ Where penguins eat Windows
 <h2 class="title">Sidebar</h2>
 <div class="content">
 <TMPL_VAR SIDEBAR>
-</div>
-</div>
-</div>
+</div> <!-- /content -->
+</div> <!-- /blockinner -->
+</div> <!-- /block -->
 </TMPL_IF>
 </div> <!-- /sidebar-left -->
 
@@ -108,7 +108,7 @@ Tags:
 <TMPL_LOOP NAME="TAGS">
 <TMPL_VAR NAME=LINK>
 </TMPL_LOOP>
-</div>
+</div> <!-- /tags -->
 </TMPL_IF>
 
 <TMPL_IF NAME="BACKLINKS">
@@ -126,7 +126,7 @@ Links:
 </span>
 </span>
 </TMPL_IF>
-</div>
+</div> <!-- /backlinks -->
 </TMPL_IF>
 
 </div></div> <!-- /squeeze /main -->
@@ -143,24 +143,23 @@ Links:
 <div class="pagecopyright">
 <a name="pagecopyright"></a>
 <TMPL_VAR COPYRIGHT>
-</div>
+</div> <!-- /pagecopyright -->
 </TMPL_IF>
 
 <TMPL_IF LICENSE>
 <div class="pagelicense">
 <a name="pagelicense"></a>
 License: <TMPL_VAR LICENSE>
-</div>
+</div> <!-- /pagelicense -->
 </TMPL_IF>
 
 <div class="pagedate">
 Last edited <TMPL_VAR NAME=MTIME>
 <!-- Created <TMPL_VAR NAME=CTIME> -->
-</div>
+</div> <!-- /pagedate -->
 
 <TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
 <!-- from <TMPL_VAR NAME=WIKINAME> -->
-</div>
 
 </div> <!-- /footer -->
 </div> <!-- /footer-wrapper -->
