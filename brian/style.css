@@ -128,7 +128,9 @@ a:active, a.active, li a.active {
   color: #0000FF; 
 }
 		
-h1.title, h1.title a, h1.title a:hover {
+h1.title, h1.title a, h1.title a:hover,
+.header, .header a, .header a:hover
+{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: #6191C5;
@@ -171,7 +173,7 @@ h4, h5, h6 {
   max-width: 720px;
 }
 
-.node h2, #main-bottom
+.content>h2, #main-bottom, .inlinepage
 {
   background: url(ropes/rope_seperator.jpg) no-repeat;
   padding: 20px 50px 0.5em 50px;
