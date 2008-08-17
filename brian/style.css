@@ -493,6 +493,12 @@ div.error {
   top:.3em;
 }
 
+.pagedate {
+	font-style: italic;
+	display: block;
+	margin-top: 2em;
+}
+
 /* Administration styles */
 .admin-panel {
   margin:0;
@@ -612,11 +618,6 @@ div.node div.content .book-navigation .page-links {
 }
 
 /* Node, Block, Content styles */
-.node {
-  margin-bottom:15px;
-  padding-bottom:15px;
-}
-
 .node h2.title {
   margin-bottom:.1em;
 }
