@@ -166,16 +166,18 @@ h4, h5, h6 {
 }
 
 .header-rod {
-  background: url(ropes/rope_seperator_long.jpg) no-repeat;
+  background: url(ropes/rope_seperator_long_left.jpg) top left no-repeat,
+  url(ropes/rope_seperator_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
   margin-left: -10px;
-  margin-right: -10px;
   height: 36px;
-  max-width: 720px;
 }
 
 .content>h2, #main-bottom, .inlinepage
 {
-  background: url(ropes/rope_seperator.jpg) no-repeat;
+  background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
+  url(ropes/rope_seperator_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
   padding: 20px 50px 0.5em 50px;
   margin: 0px -50px 0 -50px;
 }
@@ -527,7 +529,9 @@ div.error {
 .comment {
   padding: 30px 50px 10px 50px; 
 
-  background: url(ropes/rope_seperator.jpg) no-repeat;
+  background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
+  url(ropes/rope_seperator_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
   margin-left: -50px;
   margin-right: -50px;
   max-width: 720px;
