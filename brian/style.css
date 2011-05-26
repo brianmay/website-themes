@@ -73,7 +73,7 @@ ul.galleries li {
 body {
   margin: 0;
   padding: 0;
-  min-width: 720px;      
+  min-width: 530px;      
   /* 2x (left-side fullwidth + main padding) + right-side fullwidth */
 }
 
@@ -206,6 +206,8 @@ code {
 
 img { 
   border: 0; 
+  width: 100%;
+  max-width: 480px;
 }
 
 ol, ul, dl { 

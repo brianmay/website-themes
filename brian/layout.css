@@ -53,7 +53,7 @@ body.both-sidebars #main {
   url(ropes/rope_join_left.jpg) left repeat-y,
   url(ropes/rope_join_right.jpg) right repeat-y;
   padding: 1px 50px 0 50px;
-  min-width: 400px;
+  min-width: 200px;
 }
 
 /* And add blanks left and right for the sidebars to fill */
