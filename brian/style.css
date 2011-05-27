@@ -206,6 +206,9 @@ code {
 
 img { 
   border: 0; 
+}
+
+.photo {
   width: 100%;
   max-width: 480px;
 }
