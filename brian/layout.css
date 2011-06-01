@@ -19,15 +19,6 @@
   max-width: 1270px;
 }
 
-/* With 3 columns, require a minimum width of 1000px to ensure there is enough horizontal space. */
-body.both-sidebars {
-  /*min-width: 980px;*/
-}
-/* With 2 columsn, require a minimum width of 800px. */
-body.sidebar-left, body.sidebar-right {
-  /*min-width: 780px;*/
-}
-
 /* We must define 100% width to avoid the body being too narrow for near-empty pages */
 #main {
   float: left;
@@ -53,7 +44,6 @@ body.both-sidebars #main {
   url(ropes/rope_join_left.jpg) left repeat-y,
   url(ropes/rope_join_right.jpg) right repeat-y;
   padding: 1px 50px 0 50px;
-  min-width: 200px;
 }
 
 /* And add blanks left and right for the sidebars to fill */
