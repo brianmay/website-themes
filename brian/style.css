@@ -739,3 +739,40 @@ div.recentchanges {
 	width: 60%;
 }
 
+@media screen and (max-width: 700px) {
+body.sidebar-left #main {
+  margin-left: 0;
+}
+body.sidebar-right #main {
+  margin-right: 0;
+}
+body.both-sidebars #main {
+  margin: 0 0;
+}
+/* And add blanks left and right for the sidebars to fill */
+body.sidebar-left #squeeze {
+  margin: 0;
+}
+body.sidebar-right #squeeze {
+  margin: 0;
+}
+body.both-sidebars #squeeze {
+  margin: 0;
+}
+.header-rod {
+  background: None;
+  margin-left: 0;
+  height: 0;
+}
+#main-top {
+  background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
+  url(ropes/rope_seperator_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
+  padding: 20px 50px 0.5em 50px;
+  margin: 0px -50px 0 -50px;
+}
+#container .sidebar {
+  margin: 0 0 0 0;
+  padding: 0 50px;
+}
+}

@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/brian/local.css" type="text/css" />
 <TMPL_IF NAME="FEEDLINKS"><TMPL_VAR FEEDLINKS></TMPL_IF>
 <TMPL_IF NAME="META"><TMPL_VAR META></TMPL_IF>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body class="front not-logged-in sidebar-left">
@@ -91,6 +92,7 @@ Where penguins eat Windows
 </div> <!-- /sidebar-left -->
 
 <div id="main" class="column"><div id="squeeze">
+<div id="main-top"></div>
 <TMPL_LOOP NAME="PARENTLINKS">
 <a href="<TMPL_VAR NAME=URL>"><TMPL_VAR NAME=PAGE></a>/ 
 </TMPL_LOOP>
@@ -101,7 +103,6 @@ Where penguins eat Windows
 <div class="content"><TMPL_VAR CONTENT></div>
 </div>
 <div id="main-bottom"></div>
-<div id="content-bottom"></div>
 
 <TMPL_IF NAME="TAGS">
 <div class="tags">
