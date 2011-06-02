@@ -87,18 +87,3 @@ body.both-sidebars #squeeze {
   clear: both;
   margin: 4em 0 -3em;
 }
-
-
-/*
-body.sidebar-left  #footer {
-  margin-left: -180px;
-}
-
-body.sidebar-right #footer {
-  margin-right: -180px;
-}
-
-body.both-sidebars #footer {
-  margin: 0 -180px;
-}
-*/
