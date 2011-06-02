@@ -722,6 +722,10 @@ div.recentchanges {
 @media screen and (max-width: 700px) {
 #main {
   width: auto;
+  float: none;
+}
+#container .sidebar {
+  float: none;
 }
 body.sidebar-left #main {
   margin-left: 0;
