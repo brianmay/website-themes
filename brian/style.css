@@ -164,15 +164,7 @@ h4, h5, h6 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.header-rod {
-  background: url(ropes/rope_seperator_long_left.jpg) top left no-repeat,
-  url(ropes/rope_seperator_right.jpg) top right no-repeat,
-  url(ropes/rod_middle.jpg) top repeat-x;
-  margin-left: -10px;
-  height: 36px;
-}
-
-.content>h2, #main-bottom, .inlinepage, .comment
+.content>h2, #main-top, #main-bottom, .inlinepage, .comment
 {
   background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
   url(ropes/rope_seperator_right.jpg) top right no-repeat,
@@ -747,18 +739,6 @@ body.sidebar-right #squeeze {
 body.both-sidebars #squeeze {
   margin: 0;
 }
-.header-rod {
-  background: None;
-  margin-left: 0;
-  height: 0;
-}
-#main-top {
-  background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
-  url(ropes/rope_seperator_right.jpg) top right no-repeat,
-  url(ropes/rod_middle.jpg) top repeat-x;
-  padding: 20px 50px 0.5em 50px;
-  margin: 0px -50px 0 -50px;
-}
 #container .sidebar {
   margin: 0 0 0 0;
   padding: 0 50px;
@@ -770,7 +750,7 @@ body.both-sidebars #squeeze {
   padding-left: 0;
   padding-right: 0;
 }
-#main-top, .content>h2, #main-bottom, .inlinepage, .comment {
+.content>h2, #main-top, #main-bottom, .inlinepage, .comment {
   background: url(ropes/rod_left.jpg) top left no-repeat,
   url(ropes/rod_right.jpg) top right no-repeat,
   url(ropes/rod_middle.jpg) top repeat-x;

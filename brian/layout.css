@@ -27,13 +27,13 @@
 
 /* So we move the #main container over the sidebars to compensate */
 body.sidebar-left #main {
-  margin-left: -210px;
+  margin-left: -180px;
 }
 body.sidebar-right #main {
-  margin-right: -210px;
+  margin-right: -180px;
 }
 body.both-sidebars #main {
-  margin: 0 -210px;
+  margin: 0 -180px;
 }
 
 #squeeze {
@@ -48,19 +48,19 @@ body.both-sidebars #main {
 
 /* And add blanks left and right for the sidebars to fill */
 body.sidebar-left #squeeze {
-  margin-left: 210px;
+  margin-left: 180px;
 }
 body.sidebar-right #squeeze {
-  margin-right: 210px;
+  margin-right: 180px;
 }
 body.both-sidebars #squeeze {
-  margin: 0 210px;
+  margin: 0 180px;
 }
 
 /* We ensure the sidebars are still clickable using z-index */
 #container .sidebar {
   margin: 0 0 5em;
-  width: 210px;
+  width: 180px;
   float: left;
   z-index: 2;
   position: relative;
@@ -91,14 +91,14 @@ body.both-sidebars #squeeze {
 
 /*
 body.sidebar-left  #footer {
-  margin-left: -210px;
+  margin-left: -180px;
 }
 
 body.sidebar-right #footer {
-  margin-right: -210px;
+  margin-right: -180px;
 }
 
 body.both-sidebars #footer {
-  margin: 0 -210px;
+  margin: 0 -180px;
 }
 */
