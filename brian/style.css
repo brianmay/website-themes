@@ -172,7 +172,7 @@ h4, h5, h6 {
   height: 36px;
 }
 
-.content>h2, #main-bottom, .inlinepage
+.content>h2, #main-bottom, .inlinepage, .comment
 {
   background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
   url(ropes/rope_seperator_right.jpg) top right no-repeat,
@@ -530,17 +530,6 @@ div.error {
 }
 
 /* Comment styles */
-.comment {
-  padding: 30px 50px 10px 50px; 
-
-  background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
-  url(ropes/rope_seperator_right.jpg) top right no-repeat,
-  url(ropes/rod_middle.jpg) top repeat-x;
-  margin-left: -50px;
-  margin-right: -50px;
-  max-width: 720px;
-}
-
 .comment  h3.title, .comment  h3.title a {
   font-size: 122%;
   color: #2266AB;
@@ -773,5 +762,21 @@ body.both-sidebars #squeeze {
 #container .sidebar {
   margin: 0 0 0 0;
   padding: 0 50px;
+}
+}
+@media screen and (max-width: 550px) {
+#squeeze {
+  background: None;
+  padding-left: 0;
+  padding-right: 0;
+}
+#main-top, .content>h2, #main-bottom, .inlinepage, .comment {
+  background: url(ropes/rod_left.jpg) top left no-repeat,
+  url(ropes/rod_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
 }
 }
