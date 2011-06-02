@@ -744,7 +744,7 @@ body.both-sidebars #squeeze {
   padding: 0 50px;
 }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 500px) {
 #squeeze {
   background: None;
   padding-left: 0;
