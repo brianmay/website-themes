@@ -127,13 +127,13 @@ a:active, a.active, li a.active {
   color: #0000FF; 
 }
 		
-h1.title, h1.title a, h1.title a:hover,
-.header, .header a, .header a:hover
+h1.title, h1.title a,
+.header, .header a
 {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: #6191C5;
-  font-size: 200%;
+  font-size: 150%;
   margin:0;
   margin-bottom:0px;
   line-height:normal;
