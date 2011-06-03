@@ -57,9 +57,9 @@ Where penguins eat Windows
 <li class="leaf"><a href="<TMPL_VAR BASEURL>Organisations/">Organisations</a></li>
 <li class="leaf"><a href="<TMPL_VAR BASEURL>People/">People</a></li>
 <li class="leaf"><a href="<TMPL_VAR BASEURL>Trips/">Trips</a></li>
-<TMPL_IF NAME="EDITURL">
+<!-- <TMPL_IF NAME="EDITURL">
 <li class="leaf"><a href="<TMPL_VAR EDITURL>">Edit</a></li>
-</TMPL_IF>
+</TMPL_IF> -->
 <TMPL_IF NAME="RECENTCHANGESURL">
 <li class="leaf"><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
 </TMPL_IF>
@@ -101,6 +101,21 @@ Where penguins eat Windows
 <div class="content"><TMPL_VAR CONTENT></div>
 </div>
 <div id="main-bottom"></div>
+
+<TMPL_UNLESS DYNAMIC>
+<TMPL_IF COMMENTS>
+<div id="comments">
+<TMPL_VAR COMMENTS>
+<TMPL_IF ADDCOMMENTURL>
+<div class="addcomment">
+<a href="<TMPL_VAR ADDCOMMENTURL>">Add a comment</a>
+</div>
+<TMPL_ELSE>
+<div class="addcomment">Comments on this page are closed.</div>
+</TMPL_IF>
+</div>
+</TMPL_IF>
+</TMPL_UNLESS>
 
 <TMPL_IF NAME="TAGS">
 <div class="tags">
