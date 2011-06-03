@@ -754,4 +754,8 @@ body.both-sidebars #squeeze {
   margin-left: 0;
   margin-right: 0;
 }
+pre {
+  padding-left: 5px;
+  padding-right: 5px;
+}
 }
