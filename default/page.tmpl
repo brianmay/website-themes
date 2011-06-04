@@ -1,13 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<TMPL_IF HTML5><!DOCTYPE html>
+<html>
+<TMPL_ELSE><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+</TMPL_IF>
 <head>
 <TMPL_IF DYNAMIC>
 <TMPL_IF FORCEBASEURL><base href="<TMPL_VAR FORCEBASEURL>" /><TMPL_ELSE>
 <TMPL_IF BASEURL><base href="<TMPL_VAR BASEURL>" /></TMPL_IF>
 </TMPL_IF>
 </TMPL_IF>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TMPL_IF HTML5><meta charset="utf-8" /><TMPL_ELSE><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></TMPL_IF>
 <title><TMPL_VAR TITLE></title>
 <TMPL_IF FAVICON>
 <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
@@ -27,7 +30,10 @@
 </head>
 <body>
 
-<div class="header">
+<TMPL_IF HTML5><article class="page"><TMPL_ELSE><div class="page"></TMPL_IF>
+
+<TMPL_IF HTML5><section class="pageheader"><TMPL_ELSE><div class="pageheader"></TMPL_IF>
+<TMPL_IF HTML5><header class="header"><TMPL_ELSE><div class="header"></TMPL_IF>
 <span>
 <span class="parentlinks">
 <TMPL_LOOP PARENTLINKS>
@@ -44,10 +50,10 @@
 <TMPL_IF SEARCHFORM>
 <TMPL_VAR SEARCHFORM>
 </TMPL_IF>
-</div>
+<TMPL_IF HTML5></header><TMPL_ELSE></div></TMPL_IF>
 
 <TMPL_IF HAVE_ACTIONS>
-<div class="actions">
+<TMPL_IF HTML5><nav class="actions"><TMPL_ELSE><div class="actions"></TMPL_IF>
 <ul>
 <li><a href="http://staff.microcomaustralia.com.au/brian/">Brian</a></li>
 <li><a href="http://wiki.microcomaustralia.com.au/">Wiki</a></li>
@@ -79,34 +85,72 @@
 </TMPL_IF>
 </TMPL_IF>
 </ul>
-</div>
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
+
+<TMPL_IF OTHERLANGUAGES>
+<TMPL_IF HTML5><nav id="otherlanguages"><TMPL_ELSE><div id="otherlanguages"></TMPL_IF>
+<ul>
+<TMPL_LOOP OTHERLANGUAGES>
+<li>
+<a href="<TMPL_VAR URL>"><TMPL_VAR LANGUAGE></a>
+<TMPL_IF MASTER>
+(master)
+<TMPL_ELSE>
+&nbsp;(<TMPL_VAR PERCENT>%)
+</TMPL_IF>
+</li>
+</TMPL_LOOP>
+</ul>
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
+</TMPL_IF>
+
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 
 <TMPL_IF SIDEBAR>
-<div id="sidebar">
+<TMPL_IF HTML5><aside class="sidebar"><TMPL_ELSE><div class="sidebar"></TMPL_IF>
 <TMPL_VAR SIDEBAR>
-</div>
+<TMPL_IF HTML5></aside><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 
-<div id="content">
+<div id="pagebody">
+
+<TMPL_IF HTML5><section id="content"><TMPL_ELSE><div id="content"></TMPL_IF>
 <TMPL_VAR CONTENT>
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+
+<TMPL_UNLESS DYNAMIC>
+<TMPL_IF COMMENTS>
+<TMPL_IF HTML5><section id="comments"><TMPL_ELSE><div id="comments"></TMPL_IF>
+<TMPL_VAR COMMENTS>
+<TMPL_IF ADDCOMMENTURL>
+<div class="addcomment">
+<a href="<TMPL_VAR ADDCOMMENTURL>">Add a comment</a>
+</div>
+<TMPL_ELSE>
+<div class="addcomment">Comments on this page are closed.</div>
+</TMPL_IF>
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
+</TMPL_IF>
+</TMPL_UNLESS>
+
 </div>
 
-<div id="footer">
+<TMPL_IF HTML5><footer id="footer" class="pagefooter"><TMPL_ELSE><div id="footer" class="pagefooter"></TMPL_IF>
 <TMPL_UNLESS DYNAMIC>
-<div id="pageinfo">
+<TMPL_IF HTML5><nav id="pageinfo"><TMPL_ELSE><div id="pageinfo"></TMPL_IF>
 
 <TMPL_IF TAGS>
-<div class="tags">
+<TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><div class="tags"></TMPL_IF>
 Tags:
 <TMPL_LOOP TAGS>
 <TMPL_VAR LINK>
 </TMPL_LOOP>
-</div>
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 
 <TMPL_IF BACKLINKS>
-<div id="backlinks">
+<TMPL_IF HTML5><nav id="backlinks"><TMPL_ELSE><div id="backlinks"></TMPL_IF>
 Links:
 <TMPL_LOOP BACKLINKS>
 <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
@@ -120,7 +164,7 @@ Links:
 </span>
 </span>
 </TMPL_IF>
-</div>
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 
 <TMPL_IF COPYRIGHT>
@@ -142,11 +186,13 @@ Last edited <TMPL_VAR MTIME>
 <!-- Created <TMPL_VAR CTIME> -->
 </div>
 
-</div>
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 <TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
 </TMPL_UNLESS>
 <!-- from <TMPL_VAR WIKINAME> -->
-</div>
+<TMPL_IF HTML5></footer><TMPL_ELSE></div></TMPL_IF>
+
+<TMPL_IF HTML5></article><TMPL_ELSE></div></TMPL_IF>
 
 </body>
 </html>
