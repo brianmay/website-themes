@@ -1,25 +1,45 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<TMPL_IF DYNAMIC>
+<TMPL_IF FORCEBASEURL><base href="<TMPL_VAR FORCEBASEURL>" /><TMPL_ELSE>
+<TMPL_IF BASEURL><base href="<TMPL_VAR BASEURL>" /></TMPL_IF>
+</TMPL_IF>
+</TMPL_IF>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><TMPL_VAR TITLE></title>
 <TMPL_IF FAVICON>
 <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
 </TMPL_IF>
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/default/style.css" type="text/css" />
+<TMPL_IF LOCAL_CSS>
+<link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/default/<TMPL_VAR LOCAL_CSS>" type="text/css" />
+<TMPL_ELSE>
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/default/local.css" type="text/css" />
+</TMPL_IF>
+<TMPL_IF EDITURL>
+<link rel="alternate" type="application/x-wiki" title="Edit this page" href="<TMPL_VAR EDITURL>" />
+</TMPL_IF>
 <TMPL_IF FEEDLINKS><TMPL_VAR FEEDLINKS></TMPL_IF>
+<TMPL_IF RELVCS><TMPL_VAR RELVCS></TMPL_IF>
 <TMPL_IF META><TMPL_VAR META></TMPL_IF>
 </head>
 <body>
 
 <div class="header">
 <span>
+<span class="parentlinks">
 <TMPL_LOOP PARENTLINKS>
 <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
 </TMPL_LOOP>
+</span>
+<span class="title">
 <TMPL_VAR TITLE>
+<TMPL_IF ISTRANSLATION>
+&nbsp;(<TMPL_VAR PERCENTTRANSLATED>%)
+</TMPL_IF>
+</span>
 </span>
 <TMPL_IF SEARCHFORM>
 <TMPL_VAR SEARCHFORM>
@@ -32,7 +52,7 @@
 <li><a href="http://staff.microcomaustralia.com.au/brian/">Brian</a></li>
 <li><a href="http://wiki.microcomaustralia.com.au/">Wiki</a></li>
 <TMPL_IF EDITURL>
-<li><a href="<TMPL_VAR EDITURL>">Edit</a></li>
+<li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
 </TMPL_IF>
 <TMPL_IF RECENTCHANGESURL>
 <li><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
@@ -40,11 +60,23 @@
 <TMPL_IF HISTORYURL>
 <li><a href="<TMPL_VAR HISTORYURL>">History</a></li>
 </TMPL_IF>
+<TMPL_IF GETSOURCEURL>
+<li><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
+</TMPL_IF>
 <TMPL_IF PREFSURL>
 <li><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
 </TMPL_IF>
+<TMPL_IF ACTIONS>
+<TMPL_LOOP ACTIONS>
+<li><TMPL_VAR ACTION></li>
+</TMPL_LOOP>
+</TMPL_IF>
+<TMPL_IF COMMENTSLINK>
+<li><TMPL_VAR COMMENTSLINK></li>
+<TMPL_ELSE>
 <TMPL_IF DISCUSSIONLINK>
-<li><TMPL_VAR DISCUSSIONLINK><br /></li>
+<li><TMPL_VAR DISCUSSIONLINK></li>
+</TMPL_IF>
 </TMPL_IF>
 </ul>
 </div>
@@ -61,6 +93,7 @@
 </div>
 
 <div id="footer">
+<TMPL_UNLESS DYNAMIC>
 <div id="pageinfo">
 
 <TMPL_IF TAGS>
@@ -111,6 +144,7 @@ Last edited <TMPL_VAR MTIME>
 
 </div>
 <TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
+</TMPL_UNLESS>
 <!-- from <TMPL_VAR WIKINAME> -->
 </div>
 
