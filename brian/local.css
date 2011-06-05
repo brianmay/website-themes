@@ -89,6 +89,11 @@ img {
   max-width: 480px;
 }
 
+fieldset {
+  margin: 1ex 0;
+  border: 1px solid #999;
+}
+
 /* Header styles */
 
 .header {
