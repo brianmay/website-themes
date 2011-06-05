@@ -94,6 +94,14 @@ fieldset {
   border: 1px solid #999;
 }
 
+.fb_submit {
+	inline: none;
+	display: inline;
+}
+
+.fb_controls {
+	margin: 10px 0;
+}
 /* Header styles */
 
 .header {
