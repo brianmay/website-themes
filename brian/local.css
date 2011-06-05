@@ -87,13 +87,14 @@ fieldset {
 }
 
 .fb_submit {
-	inline: none;
+	float: none;
 	display: inline;
 }
 
 .fb_controls {
 	margin: 10px 0;
 }
+
 /* Header styles */
 
 .header {
