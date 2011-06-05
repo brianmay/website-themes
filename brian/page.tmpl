@@ -8,8 +8,13 @@
 <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
 </TMPL_IF>
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/brian/style.css" type="text/css" />
+<TMPL_IF LOCAL_CSS>
+<link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/brian/<TMPL_VAR LOCAL_CSS>" type="text/css" />
+<TMPL_ELSE>
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/brian/local.css" type="text/css" />
+</TMPL_IF>
 <TMPL_IF FEEDLINKS><TMPL_VAR FEEDLINKS></TMPL_IF>
+<TMPL_IF RELVCS><TMPL_VAR RELVCS></TMPL_IF>
 <TMPL_IF META><TMPL_VAR META></TMPL_IF>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
@@ -66,11 +71,23 @@ Where penguins eat Windows
 <TMPL_IF HISTORYURL>
 <li class="leaf"><a href="<TMPL_VAR HISTORYURL>">History</a></li>
 </TMPL_IF>
+<TMPL_IF GETSOURCEURL>
+<li class="leaf"><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
+</TMPL_IF>
 <TMPL_IF PREFSURL>
 <li class="leaf"><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
 </TMPL_IF>
+<TMPL_IF ACTIONS>
+<TMPL_LOOP ACTIONS>
+<li class="leaf"><TMPL_VAR ACTION></li>
+</TMPL_LOOP>
+</TMPL_IF>
+<TMPL_IF COMMENTSLINK>
+<li class="leaf"><TMPL_VAR COMMENTSLINK></li>
+<TMPL_ELSE>
 <TMPL_IF DISCUSSIONLINK>
-<li class="leaf"><TMPL_VAR DISCUSSIONLINK><br /></li>
+<li class="leaf"><TMPL_VAR DISCUSSIONLINK></li>
+</TMPL_IF>
 </TMPL_IF>
 </ul>
 </div> <!-- /content -->
