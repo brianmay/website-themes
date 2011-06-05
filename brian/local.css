@@ -98,7 +98,7 @@ fieldset {
 .pagedate,
 .pagelicense,
 .pagecopyright,
-.backlinks {
+#backlinks {
 	margin-top: 0;
 }
 
