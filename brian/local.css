@@ -53,18 +53,18 @@ a:active, a.active, li a.active {
   padding-bottom: 0;
 }
 
-pre {
+pre, blockquote {
   background: #333;
   border: 1px solid #ccc;
-  padding: 0.75em 1.5em;
+  margin: 1em 2em;
+  padding: 0 5px;
+}
+
+pre {
   font-family: monospace;
 }
 
 blockquote {
-  background: #333;
-  border: 1px solid #ccc;
-  margin: 0.5em 1em;
-  padding: 0.3em;
   font-style: italic;
 }
 
@@ -232,6 +232,10 @@ body.both-sidebars #squeeze {
   margin: 0 0 0 0;
   padding: 0 50px;
 }
+pre, blockquote {
+  margin-left: 0;
+  margin-right: 0;
+}
 }
 @media screen and (max-width: 500px) {
 #squeeze {
@@ -247,9 +251,5 @@ body.both-sidebars #squeeze {
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
-}
-pre {
-  padding-left: 5px;
-  padding-right: 5px;
 }
 }
