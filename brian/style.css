@@ -1,5 +1,11 @@
+/* ikiwiki style sheet */
+
+/* Note that instead of modifying this style sheet, you can instead edit
+ * local.css and use it to override or change settings in this one.
+ */
 
 @import "layout.css";
+
 /* html5 compat */
 article,
 header,
