@@ -136,6 +136,9 @@ fieldset {
   font-size: 85%;
 }
 
+.recentchanges .changelog {
+  background: #333;
+}
 
 /* Headings */
 
