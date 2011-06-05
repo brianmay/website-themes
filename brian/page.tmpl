@@ -1,8 +1,16 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+<TMPL_IF HTML5><!DOCTYPE html>
+<html>
+<TMPL_ELSE><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-AU" xml:lang="en-AU">
+<html xmlns="http://www.w3.org/1999/xhtml">
+</TMPL_IF>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<TMPL_IF DYNAMIC>
+<TMPL_IF FORCEBASEURL><base href="<TMPL_VAR FORCEBASEURL>" /><TMPL_ELSE>
+<TMPL_IF BASEURL><base href="<TMPL_VAR BASEURL>" /></TMPL_IF>
+</TMPL_IF>
+</TMPL_IF>
+<TMPL_IF HTML5><meta charset="utf-8" /><TMPL_ELSE><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></TMPL_IF>
 <title><TMPL_VAR TITLE></title>
 <TMPL_IF FAVICON>
 <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
@@ -18,90 +26,80 @@
 <TMPL_IF META><TMPL_VAR META></TMPL_IF>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
+<body class="sidebar-left">
 
-<body class="front not-logged-in sidebar-left">
-<div id="page">
-<div id="header">
-<div id="logo-title">
+<TMPL_IF HTML5><article class="page"><TMPL_ELSE><div class="page"></TMPL_IF>
 
+<TMPL_IF HTML5><section class="pageheader"><TMPL_ELSE><div class="pageheader"></TMPL_IF>
+<TMPL_IF HTML5><header class="header"><TMPL_ELSE><div class="header"></TMPL_IF>
+<h1 id="site-name">
+<TMPL_IF BASEURL>
+<a href="<TMPL_VAR BASEURL>">Brian May</a>
+<TMPL_ELSE>
+Brian May
+</TMPL_IF>
+</h1>
+<div id='site-slogan'>
+Where penguins eat Windows
+</div>
 <TMPL_IF SEARCHFORM>
 <TMPL_VAR SEARCHFORM>
 </TMPL_IF>
-
-<div id="name-and-slogan">
-<h1 id="site-name">
-<a href="<TMPL_VAR BASEURL>">Brian May</a>
-</h1>
-
-<div id='site-slogan'>
-Where penguins eat Windows
-</div> <!-- /site-slogan -->
-</div> <!-- /name-and-slogan -->
-
-</div> <!-- /logo-title -->
-
-
-<div id="navigation" class="menu">
-</div> <!-- /navigation -->
-
-<div id="header-region">
-</div> <!-- /header-region -->
-</div> <!-- /header -->
+<TMPL_IF HTML5></header><TMPL_ELSE></div></TMPL_IF>
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 
 <div id="container" class="clear-block">
 
 <div id="sidebar-left" class="column sidebar">
 <div class="block">
-<div class="blockinner">
 <h2 class="title">Navigation</h2>
-<div class="content">
+<TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
 <ul class="menu">
-<li class="leaf"><a href="<TMPL_VAR BASEURL>diary/">Diary</a></li>
-<li class="leaf"><a href="<TMPL_VAR BASEURL>Skills/">Skills</a></li>
-<li class="leaf"><a href="<TMPL_VAR BASEURL>Hobbies/">Hobbies</a></li>
-<li class="leaf"><a href="<TMPL_VAR BASEURL>Organisations/">Organisations</a></li>
-<li class="leaf"><a href="<TMPL_VAR BASEURL>People/">People</a></li>
-<li class="leaf"><a href="<TMPL_VAR BASEURL>Trips/">Trips</a></li>
-<!-- <TMPL_IF EDITURL>
-<li class="leaf"><a href="<TMPL_VAR EDITURL>">Edit</a></li>
-</TMPL_IF> -->
+<li><a href="<TMPL_VAR BASEURL>diary/">Diary</a></li>
+<li><a href="<TMPL_VAR BASEURL>Skills/">Skills</a></li>
+<li><a href="<TMPL_VAR BASEURL>Hobbies/">Hobbies</a></li>
+<li><a href="<TMPL_VAR BASEURL>Organisations/">Organisations</a></li>
+<li><a href="<TMPL_VAR BASEURL>People/">People</a></li>
+<li><a href="<TMPL_VAR BASEURL>Trips/">Trips</a></li>
+<!--
+<TMPL_IF EDITURL>
+<li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
+</TMPL_IF>
+-->
 <TMPL_IF RECENTCHANGESURL>
-<li class="leaf"><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
+<li><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
 </TMPL_IF>
 <TMPL_IF HISTORYURL>
-<li class="leaf"><a href="<TMPL_VAR HISTORYURL>">History</a></li>
+<li><a href="<TMPL_VAR HISTORYURL>">History</a></li>
 </TMPL_IF>
 <TMPL_IF GETSOURCEURL>
-<li class="leaf"><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
+<li><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
 </TMPL_IF>
 <TMPL_IF PREFSURL>
-<li class="leaf"><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
+<li><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
 </TMPL_IF>
 <TMPL_IF ACTIONS>
 <TMPL_LOOP ACTIONS>
-<li class="leaf"><TMPL_VAR ACTION></li>
+<li><TMPL_VAR ACTION></li>
 </TMPL_LOOP>
 </TMPL_IF>
 <TMPL_IF COMMENTSLINK>
-<li class="leaf"><TMPL_VAR COMMENTSLINK></li>
+<li><TMPL_VAR COMMENTSLINK></li>
 <TMPL_ELSE>
 <TMPL_IF DISCUSSIONLINK>
-<li class="leaf"><TMPL_VAR DISCUSSIONLINK></li>
+<li><TMPL_VAR DISCUSSIONLINK></li>
 </TMPL_IF>
 </TMPL_IF>
 </ul>
-</div> <!-- /content -->
-</div> <!-- /blockinner -->
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 </div> <!-- /block -->
 
 <TMPL_IF SIDEBAR>
 <div class="block">
-<div class="blockinner">
 <h2 class="title">Sidebar</h2>
-<div class="content">
+<TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
 <TMPL_VAR SIDEBAR>
-</div> <!-- /content -->
-</div> <!-- /blockinner -->
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 </div> <!-- /block -->
 </TMPL_IF>
 </div> <!-- /sidebar-left -->
@@ -114,14 +112,14 @@ Where penguins eat Windows
 <h1 class="title">
 <TMPL_VAR TITLE>
 </h1>
-<div class="node">
-<div class="content"><TMPL_VAR CONTENT></div>
-</div>
+<TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
+<TMPL_VAR CONTENT>
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 <div id="main-bottom"></div>
 
 <TMPL_UNLESS DYNAMIC>
 <TMPL_IF COMMENTS>
-<div id="comments">
+<TMPL_IF HTML5><section id="comments"><TMPL_ELSE><div id="comments"></TMPL_IF>
 <TMPL_VAR COMMENTS>
 <TMPL_IF ADDCOMMENTURL>
 <div class="addcomment">
@@ -130,21 +128,22 @@ Where penguins eat Windows
 <TMPL_ELSE>
 <div class="addcomment">Comments on this page are closed.</div>
 </TMPL_IF>
-</div>
+<TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 </TMPL_UNLESS>
 
+
 <TMPL_IF TAGS>
-<div class="tags">
+<TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><div class="tags"></TMPL_IF>
 Tags:
 <TMPL_LOOP TAGS>
 <TMPL_VAR LINK>
 </TMPL_LOOP>
-</div> <!-- /tags -->
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 
 <TMPL_IF BACKLINKS>
-<div id="backlinks">
+<TMPL_IF HTML5><nav id="backlinks"><TMPL_ELSE><div id="backlinks"></TMPL_IF>
 Links:
 <TMPL_LOOP BACKLINKS>
 <a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
@@ -158,43 +157,43 @@ Links:
 </span>
 </span>
 </TMPL_IF>
-</div> <!-- /backlinks -->
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 
 </div></div> <!-- /squeeze /main -->
 
-<div id="sidebar-right" class="column sidebar">
-</div> <!-- /sidebar-right -->
-
 </div> <!-- /container -->
 
-<div id="footer-wrapper">
-<div id="footer">
+<TMPL_IF HTML5><footer id="footer" class="pagefooter"><TMPL_ELSE><div id="footer" class="pagefooter"></TMPL_IF>
+<TMPL_UNLESS DYNAMIC>
+<TMPL_IF HTML5><nav id="pageinfo"><TMPL_ELSE><div id="pageinfo"></TMPL_IF>
 
 <TMPL_IF COPYRIGHT>
 <div class="pagecopyright">
 <a name="pagecopyright"></a>
 <TMPL_VAR COPYRIGHT>
-</div> <!-- /pagecopyright -->
+</div>
 </TMPL_IF>
+
 
 <div class="pagelicense">
 <a name="pagelicense"></a>
 (C)opyright <a href="mailto:brian@microcomaustralia.com.au">Brian May</a>
-</div> <!-- /pagelicense -->
+</div>
+
 
 <div class="pagedate">
 Last edited <TMPL_VAR MTIME>
 <!-- Created <TMPL_VAR CTIME> -->
-</div> <!-- /pagedate -->
+</div>
 
+<TMPL_IF HTML5></nav><TMPL_ELSE></div></TMPL_IF>
 <TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
+</TMPL_UNLESS>
 <!-- from <TMPL_VAR WIKINAME> -->
+<TMPL_IF HTML5></footer><TMPL_ELSE></div></TMPL_IF>
 
-</div> <!-- /footer -->
-</div> <!-- /footer-wrapper -->
-
-</div> <!-- /page -->
+<TMPL_IF HTML5></article><TMPL_ELSE></div></TMPL_IF>
 
 </body>
 </html>

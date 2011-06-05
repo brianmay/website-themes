@@ -1,0 +1,239 @@
+.menu {
+  padding-left: 10px;
+}
+
+.menu li {
+  list-style: None;
+}
+
+body {
+  font: 13px sans-serif;
+  background: #000;
+  color: #999;
+  line-height:1.5em;
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  font-size:100%;
+}
+tr, td {
+  padding: .25em;
+}
+
+#container {
+  margin:0px 10px 10px 10px;
+}
+
+div.content {
+  font-size: 92%;
+}
+
+a, a:link, a:visited {
+  color: #89A3E4;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  color: #80A0FF;
+  text-decoration: underline;
+}
+
+a:active, a.active, li a.active { 
+  color: #0000FF; 
+}
+
+.content>h2, #main-top, #main-bottom, .inlinepage, .comment
+{
+  background: url(ropes/rope_seperator_left.jpg) top left no-repeat,
+  url(ropes/rope_seperator_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
+  padding: 30px 50px 0.5em 50px;
+  margin: 0px -50px 0 -50px;
+}
+
+#main-top, #main-bottom {
+  padding-bottom: 0;
+}
+
+pre {
+  background: #333;
+  border: 1px solid #ccc;
+  padding: 0.75em 1.5em;
+  max-width: 27em;
+}
+
+blockquote {
+  background: #333;
+  border: 1px solid #ccc;
+  margin: 0.5em 1em;
+  padding: 0.3em;
+  font-style: italic;
+}
+
+pre {
+  font: 115%;
+}
+
+code {
+  font-family: monospace;
+}
+
+img { 
+  border: 0; 
+}
+
+.photo {
+  width: 100%;
+  max-width: 480px;
+}
+
+/* Header styles */
+
+.header {
+  margin: 10px 20px 15px 20px;
+}
+
+#site-name {
+  margin: 0;
+  display: inline;
+  font-family: "Trebuchet MS", Arial, Verdana, Sans-serif;
+  font-weight: normal;
+  font-size: 250%;
+  color: #FFF;
+}
+
+#site-name a, #site-name a:hover {
+  color: #6DA6E2;
+  margin: 0;
+  padding: 0;
+}
+
+#site-slogan {
+  color: #aaa;
+  margin: 0;
+  font-size: 85%;
+  margin-left:20px;
+}
+
+.breadcrumb {
+  margin:0;
+  padding:0;
+  font-size: 85%;
+}
+
+
+/* Headings */
+
+#sidebar-left h2 {
+  font-size: 122%;
+  color: #FFF;
+  margin: 0.5em 0;
+}
+
+.content .header {
+  font-size: 250%;
+  color: #FFF;
+  margin: 0;
+}
+
+.content h1 {
+  display: none;
+}
+
+#main h1 {
+  color: #FFF;
+  margin: 0.5em 0;
+}
+
+/* Footer styles */
+#footer-wrapper {
+  margin:0;
+  margin-top: 15px;
+}
+
+#footer {
+  background-color: #333;
+  border: solid 1px #004969;
+  color:#FFFFFF;
+  text-align: center;
+  margin:0;
+  font-size: 85%;
+  padding: 1em;
+}
+  
+#footer a {
+  color: #fff;
+  font-weight:bold;
+  border-bottom: 1px dotted #FFFFFF;
+}
+  
+#footer a:hover {
+  border-bottom: 1px solid #FFFFFF;
+}
+
+#sidebar-left .block, #sidebar-right .block {
+  background: #333;
+  border: solid #ddd 1px;
+  padding-left:10px;
+  padding-bottom:15px;
+  margin-bottom:20px;
+}
+
+.block .item-list ul {
+  padding-left:0;
+}
+
+@media screen and (max-width: 700px) {
+#main {
+  width: auto;
+  float: none;
+}
+#container .sidebar {
+  float: none;
+}
+body.sidebar-left #main {
+  margin-left: 0;
+}
+body.sidebar-right #main {
+  margin-right: 0;
+}
+body.both-sidebars #main {
+  margin: 0 0;
+}
+/* And add blanks left and right for the sidebars to fill */
+body.sidebar-left #squeeze {
+  margin: 0;
+}
+body.sidebar-right #squeeze {
+  margin: 0;
+}
+body.both-sidebars #squeeze {
+  margin: 0;
+}
+#container .sidebar {
+  margin: 0 0 0 0;
+  padding: 0 50px;
+}
+}
+@media screen and (max-width: 500px) {
+#squeeze {
+  background: None;
+  padding-left: 0;
+  padding-right: 0;
+}
+.content>h2, #main-top, #main-bottom, .inlinepage, .comment {
+  background: url(ropes/rod_left.jpg) top left no-repeat,
+  url(ropes/rod_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+pre {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+}
