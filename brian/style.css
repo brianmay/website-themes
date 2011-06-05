@@ -338,8 +338,10 @@ legend {
 	padding: 0 1ex;
 }
 .fb_submit {
-	float: left;
-	margin: 2px 0;
+	display: inline;
+}
+.fb_controls {
+	margin: 10px 0;
 }
 label.block {    
 	display: block;   
