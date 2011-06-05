@@ -4,13 +4,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title><TMPL_VAR TITLE></title>
-<TMPL_IF NAME="FAVICON">
+<TMPL_IF FAVICON>
 <link rel="icon" href="<TMPL_VAR BASEURL><TMPL_VAR FAVICON>" type="image/x-icon" />
 </TMPL_IF>
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/brian/style.css" type="text/css" />
 <link rel="stylesheet" href="<TMPL_VAR BASEURL>themes/brian/local.css" type="text/css" />
-<TMPL_IF NAME="FEEDLINKS"><TMPL_VAR FEEDLINKS></TMPL_IF>
-<TMPL_IF NAME="META"><TMPL_VAR META></TMPL_IF>
+<TMPL_IF FEEDLINKS><TMPL_VAR FEEDLINKS></TMPL_IF>
+<TMPL_IF META><TMPL_VAR META></TMPL_IF>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
@@ -19,13 +19,13 @@
 <div id="header">
 <div id="logo-title">
 
-<TMPL_IF NAME="SEARCHFORM">
+<TMPL_IF SEARCHFORM>
 <TMPL_VAR SEARCHFORM>
 </TMPL_IF>
 
 <div id="name-and-slogan">
 <h1 id="site-name">
-<a href="<TMPL_VAR NAME=BASEURL>">Brian May</a>
+<a href="<TMPL_VAR BASEURL>">Brian May</a>
 </h1>
 
 <div id='site-slogan'>
@@ -57,19 +57,19 @@ Where penguins eat Windows
 <li class="leaf"><a href="<TMPL_VAR BASEURL>Organisations/">Organisations</a></li>
 <li class="leaf"><a href="<TMPL_VAR BASEURL>People/">People</a></li>
 <li class="leaf"><a href="<TMPL_VAR BASEURL>Trips/">Trips</a></li>
-<!-- <TMPL_IF NAME="EDITURL">
+<!-- <TMPL_IF EDITURL>
 <li class="leaf"><a href="<TMPL_VAR EDITURL>">Edit</a></li>
 </TMPL_IF> -->
-<TMPL_IF NAME="RECENTCHANGESURL">
+<TMPL_IF RECENTCHANGESURL>
 <li class="leaf"><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
 </TMPL_IF>
-<TMPL_IF NAME="HISTORYURL">
+<TMPL_IF HISTORYURL>
 <li class="leaf"><a href="<TMPL_VAR HISTORYURL>">History</a></li>
 </TMPL_IF>
-<TMPL_IF NAME="PREFSURL">
+<TMPL_IF PREFSURL>
 <li class="leaf"><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
 </TMPL_IF>
-<TMPL_IF NAME="DISCUSSIONLINK">
+<TMPL_IF DISCUSSIONLINK>
 <li class="leaf"><TMPL_VAR DISCUSSIONLINK><br /></li>
 </TMPL_IF>
 </ul>
@@ -91,8 +91,8 @@ Where penguins eat Windows
 
 <div id="main" class="column"><div id="squeeze">
 <div id="main-top"></div>
-<TMPL_LOOP NAME="PARENTLINKS">
-<a href="<TMPL_VAR NAME=URL>"><TMPL_VAR NAME=PAGE></a>/ 
+<TMPL_LOOP PARENTLINKS>
+<a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>/ 
 </TMPL_LOOP>
 <h1 class="title">
 <TMPL_VAR TITLE>
@@ -117,26 +117,26 @@ Where penguins eat Windows
 </TMPL_IF>
 </TMPL_UNLESS>
 
-<TMPL_IF NAME="TAGS">
+<TMPL_IF TAGS>
 <div class="tags">
 Tags:
-<TMPL_LOOP NAME="TAGS">
-<TMPL_VAR NAME=LINK>
+<TMPL_LOOP TAGS>
+<TMPL_VAR LINK>
 </TMPL_LOOP>
 </div> <!-- /tags -->
 </TMPL_IF>
 
-<TMPL_IF NAME="BACKLINKS">
+<TMPL_IF BACKLINKS>
 <div id="backlinks">
 Links:
-<TMPL_LOOP NAME="BACKLINKS">
-<a href="<TMPL_VAR NAME=URL>"><TMPL_VAR NAME=PAGE></a>
+<TMPL_LOOP BACKLINKS>
+<a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
 </TMPL_LOOP>
-<TMPL_IF NAME="MORE_BACKLINKS">
+<TMPL_IF MORE_BACKLINKS>
 <span class="popup">...
 <span class="balloon">
-<TMPL_LOOP NAME="MORE_BACKLINKS">
-<a href="<TMPL_VAR NAME=URL>"><TMPL_VAR NAME=PAGE></a>
+<TMPL_LOOP MORE_BACKLINKS>
+<a href="<TMPL_VAR URL>"><TMPL_VAR PAGE></a>
 </TMPL_LOOP>
 </span>
 </span>
@@ -167,12 +167,12 @@ Links:
 </div> <!-- /pagelicense -->
 
 <div class="pagedate">
-Last edited <TMPL_VAR NAME=MTIME>
-<!-- Created <TMPL_VAR NAME=CTIME> -->
+Last edited <TMPL_VAR MTIME>
+<!-- Created <TMPL_VAR CTIME> -->
 </div> <!-- /pagedate -->
 
 <TMPL_IF EXTRAFOOTER><TMPL_VAR EXTRAFOOTER></TMPL_IF>
-<!-- from <TMPL_VAR NAME=WIKINAME> -->
+<!-- from <TMPL_VAR WIKINAME> -->
 
 </div> <!-- /footer -->
 </div> <!-- /footer-wrapper -->
