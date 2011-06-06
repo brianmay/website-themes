@@ -64,11 +64,13 @@ Where penguins eat Windows
 <TMPL_IF RECENTCHANGESURL>
 <li><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
 </TMPL_IF>
+</ul>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 </div>
 <div class="block">
 <h2 class="title">Actions</h2>
 <TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
+<ul class="menu">
 <!--
 <TMPL_IF EDITURL>
 <li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
