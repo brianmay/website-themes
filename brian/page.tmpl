@@ -49,10 +49,18 @@ Where penguins eat Windows
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 
 <script type="text/javascript">
+style = function(elem)
+{
+  var computedStyle;
+  if (typeof document.defaultView.getComputedStyle != 'undefined')
+    { return document.defaultView.getComputedStyle(elem, null); }
+  else
+    { return elem.currentStyle; }
+}
 function toggle(id,show) {
  var element=document.getElementById(id);
  var eleshow=document.getElementById(show);
- if (element.style.display=="none") {
+ if (style(element).display=="none") {
   element.style.display="block";
   eleshow.style.display="none";
  } else {
