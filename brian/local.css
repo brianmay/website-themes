@@ -219,8 +219,10 @@ fieldset {
   width: auto;
   float: none;
 }
-#container .sidebar {
+.sidebar {
   float: none;
+  width: auto;
+  margin: 0 50px;
 }
 body.sidebar-left #main {
   margin-left: 0;
@@ -241,28 +243,7 @@ body.sidebar-right #squeeze {
 body.both-sidebars #squeeze {
   margin: 0;
 }
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: auto;
-}
 pre, blockquote {
-  margin-left: 0;
-  margin-right: 0;
-}
-}
-@media screen and (max-width: 500px) {
-#squeeze {
-  background: None;
-  padding-left: 0;
-  padding-right: 0;
-}
-.content>h2, #main-top, #main-bottom, .inlinepage, .comment {
-  background: url(ropes/rod_left.jpg) top left no-repeat,
-  url(ropes/rod_right.jpg) top right no-repeat,
-  url(ropes/rod_middle.jpg) top repeat-x;
-  padding-left: 0;
-  padding-right: 0;
   margin-left: 0;
   margin-right: 0;
 }
@@ -291,5 +272,24 @@ pre, blockquote {
 }
 .block .title:active, .block .menu li:active {
   border: 1px solid #FFF;
+}
+}
+@media screen and (max-width: 500px) {
+#squeeze {
+  background: None;
+  padding-left: 0;
+  padding-right: 0;
+}
+.content>h2, #main-top, #main-bottom, .inlinepage, .comment {
+  background: url(ropes/rod_left.jpg) top left no-repeat,
+  url(ropes/rod_right.jpg) top right no-repeat,
+  url(ropes/rod_middle.jpg) top repeat-x;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: 0;
+  margin-right: 0;
+}
+.sidebar {
+  margin: 0;
 }
 }
