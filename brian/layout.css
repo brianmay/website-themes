@@ -58,28 +58,12 @@ body.both-sidebars #squeeze {
 }
 
 /* We ensure the sidebars are still clickable using z-index */
-#container .sidebar {
+.sidebar {
   margin: 0 0 5em;
   width: 180px;
   float: left;
   z-index: 2;
   position: relative;
-}
-
-#container .sidebar .block {
-  margin: 0 0 1.5em 0;
-}
-
-#sidebar-left .block {
-  padding: 0 15px 0 0px;
-}
-
-#sidebar-right .block {
-  padding: 0 0px 0 15px;
-}
-
-.block .content {
-  margin: 0.5em 0;
 }
 
 #footer {

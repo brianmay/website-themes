@@ -48,42 +48,56 @@ Where penguins eat Windows
 <TMPL_IF HTML5></header><TMPL_ELSE></div></TMPL_IF>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 
+<script type="text/javascript">
+function toggle(id,show) {
+ var element=document.getElementById(id);
+ var eleshow=document.getElementById(show);
+ if (element.style.display=="none") {
+  element.style.display="block";
+  eleshow.style.display="none";
+ } else {
+  element.style.display="none";
+  eleshow.style.display="inline";
+ }
+}
+</script>
+
 <div id="container" class="clear-block">
 
 <div id="sidebar-left" class="column sidebar">
 <div class="block">
-<h2 class="title">Navigation</h2>
-<TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
+<h2 class="title" onclick="toggle('navmenu','navshow');">Navigation <div id="navshow" class="show">(show)</div></h2>
+<TMPL_IF HTML5><section class="content" id="navmenu"><TMPL_ELSE><div class="content" id="navmenu"></TMPL_IF>
 <ul class="menu">
-<li><a href="<TMPL_VAR BASEURL>diary/">Diary</a></li>
-<li><a href="<TMPL_VAR BASEURL>Skills/">Skills</a></li>
-<li><a href="<TMPL_VAR BASEURL>Hobbies/">Hobbies</a></li>
-<li><a href="<TMPL_VAR BASEURL>Organisations/">Organisations</a></li>
-<li><a href="<TMPL_VAR BASEURL>People/">People</a></li>
-<li><a href="<TMPL_VAR BASEURL>Trips/">Trips</a></li>
+<li onclick='parent.location="<TMPL_VAR BASEURL>diary/";'><a href="<TMPL_VAR BASEURL>diary/">Diary</a></li>
+<li onclick='parent.location="<TMPL_VAR BASEURL>Skills/";'><a href="<TMPL_VAR BASEURL>Skills/">Skills</a></li>
+<li onclick='parent.location="<TMPL_VAR BASEURL>Hobbies/";'><a href="<TMPL_VAR BASEURL>Hobbies/">Hobbies</a></li>
+<li onclick='parent.location="<TMPL_VAR BASEURL>Organisations/";'><a href="<TMPL_VAR BASEURL>Organisations/">Organisations</a></li>
+<li onclick='parent.location="<TMPL_VAR BASEURL>People/";'><a href="<TMPL_VAR BASEURL>People/">People</a></li>
+<li onclick='parent.location="<TMPL_VAR BASEURL>Trips/";'><a href="<TMPL_VAR BASEURL>Trips/">Trips</a></li>
 <TMPL_IF RECENTCHANGESURL>
-<li><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
+<li onclick='parent.location="<TMPL_VAR RECENTCHANGESURL>";'><a href="<TMPL_VAR RECENTCHANGESURL>">RecentChanges</a></li>
 </TMPL_IF>
 </ul>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 </div>
 <div class="block">
-<h2 class="title">Actions</h2>
-<TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
+<h2 class="title" onclick="toggle('actmenu','actshow');">Actions <div id="actshow" class="show">(show)</div></h2>
+<TMPL_IF HTML5><section class="content" id="actmenu"><TMPL_ELSE><div class="content" id="actmenu"></TMPL_IF>
 <ul class="menu">
 <!--
 <TMPL_IF EDITURL>
-<li><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
+<li onclick='parent.location="<TMPL_VAR EDITURL>";'><a href="<TMPL_VAR EDITURL>" rel="nofollow">Edit</a></li>
 </TMPL_IF>
 -->
 <TMPL_IF HISTORYURL>
-<li><a href="<TMPL_VAR HISTORYURL>">History</a></li>
+<li onclick='parent.location="<TMPL_VAR HISTORYURL>";'><a href="<TMPL_VAR HISTORYURL>">History</a></li>
 </TMPL_IF>
 <TMPL_IF GETSOURCEURL>
-<li><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
+<li onclick='parent.location="<TMPL_VAR GETSOURCEURL>";'><a href="<TMPL_VAR GETSOURCEURL>">Source</a></li>
 </TMPL_IF>
 <TMPL_IF PREFSURL>
-<li><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
+<li onclick='parent.location="<TMPL_VAR PREFSURL>";'><a href="<TMPL_VAR PREFSURL>">Preferences</a></li>
 </TMPL_IF>
 <TMPL_IF ACTIONS>
 <TMPL_LOOP ACTIONS>

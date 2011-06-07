@@ -1,3 +1,20 @@
+.block .content {
+  margin: 0.5em 0;
+  display: block;
+}
+
+.block .title .show {
+  display: none;
+}
+
+#container .sidebar .block {
+  margin: 0 0 1.5em 0;
+}
+
+.block {
+  padding: 0 15px 0 0px;
+}
+
 .menu {
   padding-left: 10px;
 }
@@ -189,7 +206,7 @@ fieldset {
   border-bottom: 1px solid #FFFFFF;
 }
 
-#sidebar-left .block, #sidebar-right .block {
+.block {
   background: #333;
   border: solid #ddd 1px;
   padding-left:10px;
@@ -224,9 +241,10 @@ body.sidebar-right #squeeze {
 body.both-sidebars #squeeze {
   margin: 0;
 }
-#container .sidebar {
-  margin: 0 0 0 0;
-  padding: 0 50px;
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: auto;
 }
 pre, blockquote {
   margin-left: 0;
@@ -247,5 +265,31 @@ pre, blockquote {
   padding-right: 0;
   margin-left: 0;
   margin-right: 0;
+}
+.block {
+  padding-bottom: 0;
+}
+.block .title .show {
+  display: inline;
+}
+.block .content {
+  margin-top: 0;
+  margin-bottom: 0;
+  display: none;
+}
+.block .menu {
+  padding: 0;
+  margin: 0;
+}
+.block .title, .block .menu li {
+  border-top: 1px solid #777;
+  padding: 2em 0;
+  margin: 0;
+}
+.block .title {
+  border: none;
+}
+.block .title:active, .block .menu li:active {
+  border: 1px solid #FFF;
 }
 }
