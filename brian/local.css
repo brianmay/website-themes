@@ -197,10 +197,6 @@ fieldset {
   margin-bottom:20px;
 }
 
-.block .item-list ul {
-  padding-left:0;
-}
-
 @media screen and (max-width: 700px) {
 #main {
   width: auto;
