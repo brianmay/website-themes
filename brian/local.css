@@ -35,8 +35,16 @@ body {
 table {
   font-size:100%;
 }
-tr, td {
-  padding: .25em;
+thead tr th {
+    border-top: 1px solid #FFFFFF;
+    border-bottom: 1px solid #FFFFFF;
+}
+tbody tr:last-child td {
+    border-bottom: 1px solid #FFFFFF;
+}
+td {
+  padding: 1em 2em;
+  background: #111;
 }
 
 #container {
