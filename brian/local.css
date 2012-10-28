@@ -98,7 +98,7 @@ code {
 }
 
 img { 
-  border: 0; 
+  max-width: 100%;
 }
 
 .photo {
