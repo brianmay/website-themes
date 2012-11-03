@@ -121,7 +121,12 @@ img.img {
 }
 
 #editcontent {
-	width: 98%;
+	width: 100%;
+}
+
+input[type="text"] {
+	padding: 0;
+	margin: 5px 0 0 0;
 }
 
 .editcontentdiv {
@@ -254,10 +259,6 @@ span.color {
 }
 .comment-subject {
 	font-weight: bold;
-}
-.comment {
-	border: 1px solid #aaa;
-	padding: 3px;
 }
 
 div.progress {

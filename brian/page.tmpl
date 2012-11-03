@@ -144,12 +144,10 @@ function toggle(id,show) {
 <TMPL_IF HTML5><section class="content"><TMPL_ELSE><div class="content"></TMPL_IF>
 <TMPL_VAR CONTENT>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
-<div id="main-bottom"></div>
 
 <TMPL_UNLESS DYNAMIC>
 <TMPL_IF COMMENTS>
 <TMPL_IF HTML5><section id="comments"><TMPL_ELSE><div id="comments"></TMPL_IF>
-<TMPL_VAR COMMENTS>
 <TMPL_IF ADDCOMMENTURL>
 <div class="addcomment">
 <a href="<TMPL_VAR ADDCOMMENTURL>">Add a comment</a>
@@ -157,10 +155,12 @@ function toggle(id,show) {
 <TMPL_ELSE>
 <div class="addcomment">Comments on this page are closed.</div>
 </TMPL_IF>
+<TMPL_VAR COMMENTS>
 <TMPL_IF HTML5></section><TMPL_ELSE></div></TMPL_IF>
 </TMPL_IF>
 </TMPL_UNLESS>
 
+<div id="main-bottom"></div>
 
 <TMPL_IF TAGS>
 <TMPL_IF HTML5><nav class="tags"><TMPL_ELSE><div class="tags"></TMPL_IF>

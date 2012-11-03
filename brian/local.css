@@ -219,8 +219,7 @@ fieldset {
   background: #333;
   border: solid #ddd 1px;
   padding-left:10px;
-  padding-bottom:15px;
-  margin-bottom:20px;
+  margin-top:20px;
 }
 
 @media screen and (max-width: 700px) {
