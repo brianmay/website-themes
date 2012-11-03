@@ -129,6 +129,11 @@ input[type="text"] {
 	margin: 5px 0 0 0;
 }
 
+textarea {
+	padding: 0;
+	margin: 5px 0 0 0;
+}
+
 .editcontentdiv {
 	width: auto;
 	overflow: auto;
