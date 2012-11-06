@@ -301,3 +301,16 @@ pre, blockquote {
   margin: 0;
 }
 }
+
+.tweet {
+    margin-bottom: 15px;
+}
+.tweet img {
+  vertical-align: top;
+  display: inline-block;
+  margin-right: 10px;
+}
+.tweet_text {
+  display: inline-block;
+  width: 90%;
+}
