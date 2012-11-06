@@ -312,6 +312,7 @@ pre, blockquote {
   vertical-align: top;
   display: inline-block;
   margin-right: 10px;
+  width: 48px;
 }
 .tweet_text {
   display: inline-block;
