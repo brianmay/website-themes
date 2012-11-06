@@ -306,6 +306,9 @@ pre, blockquote {
     margin-bottom: 15px;
 }
 .tweet img {
+  display: block;
+}
+.tweet .avatar {
   vertical-align: top;
   display: inline-block;
   margin-right: 10px;
